@@ -1,4 +1,4 @@
-﻿namespace WebshopApp.Data
+﻿namespace WebshopApp.Data.Enums
 {
     public enum MovieCategory
     {

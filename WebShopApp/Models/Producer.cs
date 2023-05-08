@@ -10,5 +10,8 @@ namespace WebshopApp.Models
         public string FullName { get; set; }
         public string Bio { get; set; }
 
+        //Relationships: 1 Producer can have MANY movies
+        public List<Movie> Movies { get; set; }
+
     }
 }

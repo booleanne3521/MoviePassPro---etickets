@@ -9,5 +9,8 @@ namespace WebshopApp.Models
         public  string Logo { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+
+        //Relationships: 1 Cinema can have MANY movies
+        public List<Movie> Movies { get; set; }
     }
 }
