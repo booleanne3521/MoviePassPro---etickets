@@ -14,7 +14,11 @@ namespace WebshopApp.Controllers
         }
         public async Task<IActionResult> IndexAsync()
         {
-            var allMovies = await applicationContext.Movies.ToListAsync();
+            var allMovies = await applicationContext.Movies
+                .Include(n =>n.Cinema)
+                .OrderBy(n=>n.Name).
+                ToListAsync();
+
             return View(allMovies);
         }
     }

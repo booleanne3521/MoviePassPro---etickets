@@ -55,13 +55,13 @@ namespace WebshopApp.Data
                         {
                             FullName = "Alicia Vikander",
                             Bio = "Alicia Vikander is a Swedish actress known for her roles in Ex Machina, The Danish Girl, and Tomb Raider. She has won an Academy Award, a SAG Award, and a BAFTA Award for her work.",
-                            ProfilePictureURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Alicia_Vikander_by_Gage_Skidmore.jpg/220px-Alicia_Vikander_by_Gage_Skidmore.jpg"
+                            ProfilePictureURL = "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTvDA_5oXVd_L3O1kp4z67JdkFDbkm3l4AM4RfqmzHzEaIf-oiW3hepSf3jQ7RuPufK9OHvwzGWOa6vvBA"
                         },
                         new Actor()
                         {
                             FullName = "Alexander Skarsgård",
                             Bio = "Alexander Skarsgård is a Swedish actor best known for his roles in True Blood, The Legend of Tarzan, and Big Little Lies. He has won a Primetime Emmy Award, a Golden Globe Award, and a Screen Actors Guild Award for his work.",
-                            ProfilePictureURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Alexander_Skarsgard_by_Gage_Skidmore_3.jpg/220px-Alexander_Skarsgard_by_Gage_Skidmore_3.jpg"
+                            ProfilePictureURL = "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcT1qOrZFnK3TYQGONhZ9ZMvAMYSdkviAsIluXAFtl95yet8zUCMcI9Hz5RSGopou2UJ-tPTDKpng7e-IJg"
                         },
                         new Actor()
                         {

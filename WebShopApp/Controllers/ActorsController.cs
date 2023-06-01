@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using WebshopApp.Data;
@@ -14,9 +15,9 @@ namespace WebshopApp.Controllers
             this.applicationContext=applicationContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            var data = applicationContext.Actors.ToList();
+            var data = await applicationContext.Actors.ToListAsync();
             return View(data);
         }
     }
