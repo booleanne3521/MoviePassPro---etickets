@@ -130,7 +130,7 @@ namespace WebshopApp.Data
                             Name = "Midsommar",
                             Description = "A couple travels to Sweden to visit a rural hometown's fabled mid-summer festival. What begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.",
                             Price = 69.99,
-                            ImageURL = "https://images-na.ssl-images-amazon.com/images/I/71YcA-KIv9L._AC_SL1500_.jpg",
+                            ImageURL = "https://www.assignmentx.com/wp-content/uploads/2019/06/MIDSOMMAR-movie-poster.jpg",
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
                             CinemaId = 4,

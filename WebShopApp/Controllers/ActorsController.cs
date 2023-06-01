@@ -15,14 +15,15 @@ namespace WebshopApp.Controllers
           _service = service;
         }
 
-
-
-        
-
         public async Task<IActionResult> IndexAsync()
         {
             var data =  await _service.GetAll();
             return View(data);
         }
+        public async Task<IActionResult> CreateAsync()
+        {
+            return View();
+        }
+
     }
 }
