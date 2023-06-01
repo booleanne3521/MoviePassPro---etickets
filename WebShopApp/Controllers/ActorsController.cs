@@ -4,6 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using WebshopApp.Data;
 using WebshopApp.Data.Services;
+using WebshopApp.Models;
 
 namespace WebshopApp.Controllers
 {
@@ -24,6 +25,15 @@ namespace WebshopApp.Controllers
         {
             return View();
         }
-
+        [HttpPost]
+        public async Task<IActionResult> CreateAsync(Actor actor)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(actor);
+            }
+            _service.Add(actor);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

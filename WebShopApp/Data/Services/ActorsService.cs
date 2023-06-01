@@ -14,7 +14,8 @@ namespace WebshopApp.Data.Services
 
         public void Add(Actor actor)
         {
-            throw new NotImplementedException();
+            this.applicationContext.Actors.Add(actor);
+            this.applicationContext.SaveChanges();
         }
 
         public void Delete(int id)
