@@ -18,9 +18,11 @@ namespace WebshopApp.Data.Services
            await this.applicationContext.SaveChangesAsync();
         }
 
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await this.applicationContext.Actors.FirstOrDefaultAsync(n => n.Id == id);
+            this.applicationContext.Actors.Remove(result);
+            await this.applicationContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Actor>> GetAllAsync()
