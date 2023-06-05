@@ -12,10 +12,10 @@ namespace WebshopApp.Data.Services
             this.applicationContext=applicationContext;
         }
 
-        public void Add(Actor actor)
+        public async Task AddAsync(Actor actor)
         {
-            this.applicationContext.Actors.Add(actor);
-            this.applicationContext.SaveChanges();
+           await this.applicationContext.Actors.AddAsync(actor);
+           await this.applicationContext.SaveChangesAsync();
         }
 
         public void Delete(int id)
@@ -23,20 +23,23 @@ namespace WebshopApp.Data.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Actor>> GetAll()
+        public async Task<IEnumerable<Actor>> GetAllAsync()
         {
             var result = await this.applicationContext.Actors.ToListAsync();
             return result;
         }
 
-        public Actor GetById(int id)
+        public async Task<Actor> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await this.applicationContext.Actors.FirstOrDefaultAsync(n=> n.Id == id);
+            return result;
         }
 
-        public Actor Update(int id, Actor newActor)
+        public async Task<Actor> UpdateAsync(int id, Actor newActor)
         {
-            throw new NotImplementedException();
+            this.applicationContext.Update(newActor);
+            await this.applicationContext.SaveChangesAsync();
+            return newActor;
         }
     }
 }
