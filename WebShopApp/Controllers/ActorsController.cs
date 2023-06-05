@@ -41,7 +41,7 @@ namespace WebshopApp.Controllers
 
             if (actorDetails==null) 
             {
-                return View("Not Found");
+                return View("NotFound");
             }
             return View(actorDetails);
         }
@@ -51,7 +51,7 @@ namespace WebshopApp.Controllers
 
             if (actorDetails==null)
             {
-                return View("Not Found");
+                return View("NotFound");
             }
             return View(actorDetails);
         }
@@ -71,7 +71,7 @@ namespace WebshopApp.Controllers
 
             if (actorDetails==null)
             {
-                return View("Not Found");
+                return View("NotFound");
             }
             return View(actorDetails);
         }
@@ -82,7 +82,7 @@ namespace WebshopApp.Controllers
 
             if (actorDetails==null)
             {
-                return View("Not Found");
+                return View("NotFound");
             }
 
             await _service.DeleteAsync(id);
