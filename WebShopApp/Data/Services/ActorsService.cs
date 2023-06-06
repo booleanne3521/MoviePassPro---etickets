@@ -25,18 +25,7 @@ namespace WebshopApp.Data.Services
             await this.applicationContext.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Actor>> GetAllAsync()
-        {
-            var result = await this.applicationContext.Actors.ToListAsync();
-            return result;
-        }
-
-        public async Task<Actor> GetByIdAsync(int id)
-        {
-            var result = await this.applicationContext.Actors.FirstOrDefaultAsync(n=> n.Id == id);
-            return result;
-        }
-
+       
         public async Task<Actor> UpdateAsync(int id, Actor newActor)
         {
             this.applicationContext.Update(newActor);
