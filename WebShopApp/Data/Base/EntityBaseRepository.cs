@@ -13,14 +13,19 @@ namespace WebshopApp.Data.Base
             this.applicationContext=applicationContext;
         }
 
-        public async Task AddAsync(T entity) => await this.applicationContext.Set<T>().AddAsync(entity);
-       
+        public async Task AddAsync(T entity)
+        {
+            await this.applicationContext.Set<T>().AddAsync(entity);
+            await this.applicationContext.SaveChangesAsync();
+        }
 
         public async Task DeleteAsync(int id)
         {
            var entity = await this.applicationContext.Set<T>().FirstOrDefaultAsync(n => n.Id == id);
             EntityEntry entityEntry = this.applicationContext.Entry<T>(entity);
             entityEntry.State = EntityState.Deleted;
+            await this.applicationContext.SaveChangesAsync();
+
         }
 
         public async Task<IEnumerable<T>> GetAllAsync() => await this.applicationContext.Set<T>().ToListAsync();
@@ -32,6 +37,8 @@ namespace WebshopApp.Data.Base
         {
             EntityEntry entityEntry = this.applicationContext.Entry<T>(entity);
             entityEntry.State = EntityState.Modified;
+            await this.applicationContext.SaveChangesAsync();
+
         }
     }
 }

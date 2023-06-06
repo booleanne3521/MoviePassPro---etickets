@@ -1,9 +1,10 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using WebshopApp.Data.Base;
 
 namespace WebshopApp.Models
 {
-    public class Actor
+    public class Actor : IEntityBase
     {
         [Key]
         public int Id { get; set; }
