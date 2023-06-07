@@ -208,6 +208,18 @@ namespace WebshopApp.Data
                             ProducerId = 5,
                             ImageURL = "https://m.media-amazon.com/images/M/MV5BMzc1MDY3NDIwMV5BMl5BanBnXkFtZTgwNzkwNzU0MzI@._V1_FMjpg_UX1000_.jpg",
                             MovieCategory = Enums.MovieCategory.Drama
+                        }, 
+                        new Movie()
+                        {
+                            Name = "The Shawshank Redemption",
+                            Description = "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
+                            Price = 90,
+                            StartDate = DateTime.Now.AddDays(-5),
+                            EndDate = DateTime.Now,
+                            CinemaId = 3,
+                            ProducerId = 5,
+                            ImageURL = "https://m.media-amazon.com/images/I/519NBNHX5BL._AC_UF894,1000_QL80_.jpg",
+                            MovieCategory = Enums.MovieCategory.Drama
                         }
                     });
                     context.SaveChanges();
